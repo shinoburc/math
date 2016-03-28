@@ -16,11 +16,18 @@ foreach my $number (1..100){
 sub print_prime_factorization($){
   my $number = shift;
   
+  my $prime_myself = 1;
   foreach my $divisor(2..(ceil(sqrt($number)))){
     if($number % $divisor == 0){
       print "," . $divisor;
-      &print_prime_factorization($number / $divisor);
+      if($number / $divisor != 1){
+        &print_prime_factorization($number / $divisor);
+      }
+      $prime_myself = 0;
       last;
     }
+  }
+  if($prime_myself == 1){
+    print "," . $number;
   }
 }
