@@ -26,7 +26,6 @@ sub sum_of_divisor($){
     }
     if($number % $divisor == 0){
       $sum_of_divisor += $divisor;
-      &sum_of_divisor($number / $divisor);
     }
   }
   return $sum_of_divisor;
