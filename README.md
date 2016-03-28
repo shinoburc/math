@@ -8,6 +8,6 @@ perl math program.
 * [Kaprekar Number](KaprekarNumber.pl) : カプレカ数を探す
 * [Magic Matrix](MagicMatrix.pl) : 縦横斜めの和が等しくなる魔方陣を求める
 * [Perfect Number](PerfectNumber.pl) : 完全数を探す
-* [PrimeFactorization](PrimeFactorization.pl) 素因数分解する
+* [Prime Factorization](PrimeFactorization.pl) 素因数分解する
 * [Prime Number](PrimeNumber.pl) : 素数を求める
 * [Ramanujan](Ramanujan.pl) : ラマヌジャン数を探す
