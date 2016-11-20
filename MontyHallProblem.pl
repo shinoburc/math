@@ -26,33 +26,32 @@ foreach(0..$number_of_rounds){
   my $selected_door_number = int(rand(3));
 
   # open incorrect door
-  my $open_door_number;
   foreach my $door_number(keys %doors){
     # not open correct door
     next if $doors{$door_number} eq "correct";
     # not open selected door
-    next if $door_number == $selected_door_number;
+    next if $doors{$door_number} eq "selected";
 
     # !! This is a factor that raises the probability!
 
-    $open_door_number = $door_number;
+    $doors{$door_number} = "open";
     last;
   }
 
   # not re-select
-  if($selected_door_number == $correct_door_number){
+  if($doors{$selected_door_number} eq "correct"){
     $win_count_not_reselect++;
   }
 
   # re-select
   my $reselected_door_number;
   foreach my $door_number(keys %doors){
-    next if $door_number == $open_door_number;
-    next if $door_number == $selected_door_number;
+    next if $doors{$door_number} eq "open";
+    next if $doors{$door_number} eq "selected";
     $reselected_door_number = $door_number;
     last;
   }
-  if($reselected_door_number == $correct_door_number){
+  if($doors{$reselected_door_number} eq "correct"){
     $win_count_reselect++;
   }
 }
