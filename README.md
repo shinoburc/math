@@ -2,6 +2,8 @@
 
 perl math program.
 
+# integer
+
 * [Amicable Number](AmicableNumber.pl) : 友愛数を探す
 * [Divisor](Divisor.pl) : 約数を求める
 * [Fibonacci Sequence](FibonacciSequence.pl) : フィボナッチ数列を算出し黄金比を求める
@@ -11,3 +13,7 @@ perl math program.
 * [Prime Factorization](PrimeFactorization.pl) 素因数分解する
 * [Prime Number](PrimeNumber.pl) : 素数を求める
 * [Ramanujan](Ramanujan.pl) : ラマヌジャン数を探す
+
+# probability
+
+* [MontyHallProblem](MontyHallProblem.pl) : モンティ・ホール問題の再選択が有効であることを確認する
