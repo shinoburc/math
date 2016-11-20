@@ -19,8 +19,7 @@ foreach(0..$number_of_rounds){
   my %doors = (0 => "untouch", 1 => "untouch", 2 => "untouch");
 
   # generate correct door
-  my $correct_door_number = int(rand(3));
-  $doors{$correct_door_number} = "correct";
+  $doors{int(rand(3))} = "correct";
 
   # select door
   my $selected_door_number = int(rand(3));
