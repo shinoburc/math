@@ -13,7 +13,7 @@ use strict;
 my $win_count_not_reselect = 0;
 my $win_count_reselect = 0;
 
-my $number_of_rounds = 100000;
+my $number_of_rounds = 1000000;
 
 foreach(0..$number_of_rounds){
   my %doors = (0 => "untouch", 1 => "untouch", 2 => "untouch");
