@@ -44,15 +44,13 @@ foreach(0..$number_of_rounds){
   }
 
   # re-select
-  my $reselected_door_number;
   foreach my $door_number(keys %doors){
     next if $doors{$door_number} eq "open";
     next if $doors{$door_number} eq "selected";
-    $reselected_door_number = $door_number;
+    if($doors{$door_number} eq "correct"){
+        $win_count_reselect++;
+    }
     last;
-  }
-  if($doors{$reselected_door_number} eq "correct"){
-    $win_count_reselect++;
   }
 }
 
