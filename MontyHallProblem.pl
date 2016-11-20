@@ -5,8 +5,8 @@
 
 # e.g.)
 # $ perl MontyHallProblem.pl
-# win_count_not_reselect: win=3307, lose=6693, winning_percentage=33.07%
-# win_count_reselect: win=6694, lose=3306, winning_percentage=66.94%
+# win_count_not_reselect: win=333314, lose=666686, winning_percentage=33.3314%
+# win_count_reselect: win=556037, lose=443963, winning_percentage=55.6037%
 
 use strict;
 
