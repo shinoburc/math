@@ -29,7 +29,7 @@ foreach(0..$number_of_rounds){
     # not open correct door
     next if $doors{$door_number} eq "correct";
     # not open selected door
-    next if $doors{$door_number} eq "selected";
+    next if $door_number == $selected_door_number;
 
     # !! This is a factor that raises the probability!
 
