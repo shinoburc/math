@@ -13,14 +13,14 @@ use strict;
 my $win_count_not_reselect = 0;
 my $win_count_reselect = 0;
 
-my $number_of_rounds = 10000;
+my $number_of_rounds = 100000;
 
 foreach(0..$number_of_rounds){
-  my %doors = (0 => 0, 1 => 0, 2 => 0);
+  my %doors = (0 => "untouch", 1 => "untouch", 2 => "untouch");
 
   # generate correct door
   my $correct_door_number = int(rand(3));
-  $doors{$correct_door_number} = 1;
+  $doors{$correct_door_number} = "correct";
 
   # select door
   my $selected_door_number = int(rand(3));
@@ -29,7 +29,7 @@ foreach(0..$number_of_rounds){
   my $open_door_number;
   foreach my $door_number(keys %doors){
     # not open correct door
-    next if $doors{$door_number} == 1;
+    next if $doors{$door_number} eq "correct";
     # not open selected door
     next if $door_number == $selected_door_number;
 
