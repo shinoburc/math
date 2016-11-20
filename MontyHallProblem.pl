@@ -5,15 +5,17 @@
 
 # e.g.)
 # $ perl MontyHallProblem.pl
-# win_count_not_reselect: 3322
-# win_count_reselect: 6679
+# win_count_not_reselect: win=3307, lose=6693, winning_percentage=33.07%
+# win_count_reselect: win=6694, lose=3306, winning_percentage=66.94%
 
 use strict;
 
 my $win_count_not_reselect = 0;
 my $win_count_reselect = 0;
 
-foreach(0..10000){
+my $number_of_rounds = 10000;
+
+foreach(0..$number_of_rounds){
   my %doors = (0 => 0, 1 => 0, 2 => 0);
 
   # generate correct door
@@ -55,5 +57,11 @@ foreach(0..10000){
   }
 }
 
-print "win_count_not_reselect: " . $win_count_not_reselect . "\n";
-print "win_count_reselect: " . $win_count_reselect . "\n";
+print "win_count_not_reselect: win=" . $win_count_not_reselect 
+      . ", lose=" . ($number_of_rounds - $win_count_not_reselect)
+      . ", winning_percentage=" . $win_count_not_reselect / $number_of_rounds * 100
+      . "%\n";
+print "win_count_reselect: win=" . $win_count_reselect 
+      . ", lose=" . ($number_of_rounds - $win_count_reselect)
+      . ", winning_percentage=" . $win_count_reselect / $number_of_rounds * 100
+      . "%\n";
