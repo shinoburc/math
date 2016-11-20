@@ -3,6 +3,11 @@
 # The Monty Hall Problem
 # http://www.montyhallproblem.com/
 
+# e.g.)
+# $ perl MontyHallProblem.pl
+# win_count_not_reselect: 3322
+# win_count_reselect: 6679
+
 use strict;
 
 my $win_count_not_reselect = 0;
