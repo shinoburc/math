@@ -5,8 +5,8 @@
 
 # e.g.)
 # $ perl MontyHallProblem.pl
-# win_count_not_reselect: win=333314, lose=666686, winning_percentage=33.3314%
-# win_count_reselect: win=556037, lose=443963, winning_percentage=55.6037%
+# win_count_not_reselect: win=334035, lose=665965, winning_percentage=33.4035%
+# win_count_reselect: win=665966, lose=334034, winning_percentage=66.5966%
 
 use strict;
 
@@ -45,7 +45,7 @@ foreach(0..$number_of_rounds){
   # re-select
   foreach my $door_number(keys %doors){
     next if $doors{$door_number} eq "open";
-    next if $doors{$door_number} eq "selected";
+    next if $door_number == $selected_door_number;
     if($doors{$door_number} eq "correct"){
         $win_count_reselect++;
     }
