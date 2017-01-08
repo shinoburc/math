@@ -8,6 +8,9 @@
 # win_count_not_reselect: win=334035, lose=665965, winning_percentage=33.4035%
 # win_count_reselect: win=665966, lose=334034, winning_percentage=66.5966%
 
+# Run this program on paiza
+# https://paiza.io/projects/NlR1c6QwqKrWXsxawwmk1A
+
 use strict;
 
 my $win_count_not_reselect = 0;
